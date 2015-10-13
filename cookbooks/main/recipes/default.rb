@@ -35,7 +35,7 @@
 #include_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
-# include_recipe "sunspot"
+ include_recipe "sunspot"
 
 #uncomment to run the exim recipe
 #exim_auth "auth" do

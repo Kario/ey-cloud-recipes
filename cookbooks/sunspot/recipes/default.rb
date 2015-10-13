@@ -4,7 +4,7 @@
 #
  
 require 'digest/sha1'
-SOLR_VERSION = '3.6.1'
+SOLR_VERSION = '4.1.0'
  
 node[:applications].each do |app,data|
  

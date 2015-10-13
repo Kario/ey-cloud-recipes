@@ -66,7 +66,7 @@ if ['solo', 'util'].include?(node[:instance_role])
   end
 
   execute "install solr example package" do
-    command "cd /data/#{solr_dir} && mv example /data/solr"
+    command "cd /data/#{solr_dir} && sudo mv example /data/solr"
     not_if { FileTest.exists?("/data/solr/start.jar") }
   end
 
