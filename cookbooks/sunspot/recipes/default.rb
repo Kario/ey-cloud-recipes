@@ -45,16 +45,16 @@ node[:applications].each do |app,data|
     })
   end
  
-  execute "install solr example package" do
-    user node[:owner_name]
-    group node[:owner_name]
-    command("if [ ! -e /data/#{app}/jettyapps/solr ]; then cd /data/#{app}/jettyapps && " +
-            "wget -O solr-#{SOLR_VERSION}.tgz http://archive.apache.org/dist/lucene/solr/#{SOLR_VERSION}/solr-#{SOLR_VERSION}.tgz && " +
-            "tar -xzf solr-#{SOLR_VERSION}.tgz && " +
-            "mv solr-#{SOLR_VERSION}/example solr && " +
-            "rm -rf solr-#{SOLR_VERSION}; fi")
-    action :run
-  end
+  # execute "install solr example package" do
+    # user node[:owner_name]
+    # group node[:owner_name]
+    # command("if [ ! -e /data/#{app}/jettyapps/solr ]; then cd /data/#{app}/jettyapps && " +
+            # "wget -O solr-#{SOLR_VERSION}.tgz http://archive.apache.org/dist/lucene/solr/#{SOLR_VERSION}/solr-#{SOLR_VERSION}.tgz && " +
+            # "tar -xzf solr-#{SOLR_VERSION}.tgz && " +
+            # "mv solr-#{SOLR_VERSION}/example solr && " +
+            # "rm -rf solr-#{SOLR_VERSION}; fi")
+    # action :run
+  # end
  
   gem_package "sunspot_solr" do
     source "http://gemcutter.org"
