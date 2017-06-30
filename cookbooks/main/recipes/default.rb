@@ -35,7 +35,7 @@
 #include_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
- include_recipe "sunspot"
+#include_recipe "sunspot"
 
 #uncomment to run the exim recipe
 #exim_auth "auth" do
@@ -75,9 +75,11 @@
 #include_recipe "logrotate"
 #
 #uncomment to use the solr recipe
-#include_recipe "solr"
+include_recipe "solr"
 
 #include_recipe "varnish_frontend"
+
+include_recipe "nodejs"
 
 #uncomment to set environment variables in passenger or unicorn
 # Set environment variables as specified in cookbooks/env_vars/attributes/env_vars.rb
