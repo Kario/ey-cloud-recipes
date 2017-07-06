@@ -189,3 +189,18 @@ include_recipe "solr"
 
 #unncomment to install clamav
 #include_recipe "clamav"
+
+enable_package "net-libs/nodejs-bin" do
+  version "4.2.1-r1"
+end
+
+package "net-libs/nodejs-bin" do
+  version "4.2.1-r1"
+  action :install
+end
+
+execute "Select Node JS version" do
+  command "sudo eselect nodejs set 4.2.1"
+  command "sudo ln -nfs /opt/nodejs/4.2.1 /opt/nodejs/current"
+  command "sudo ln -nfs /opt/nodejs/4.2.1/bin/node /usr/bin/node"
+end
