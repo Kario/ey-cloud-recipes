@@ -72,6 +72,9 @@ include_recipe "sidekiq"
 #uncomment to run the resque-scheduler recipe
 # include_recipe "resque-scheduler"
 
+#disable the default redis installation
+include_recipe 'monit_disable'
+
 #uncomment to run the redis recipe
 include_recipe "redis"
 
