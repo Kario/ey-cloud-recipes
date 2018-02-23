@@ -67,8 +67,7 @@ if ['util'].include?(node[:instance_role])
         :timeout => node[:redis][:timeout],
         :databases => node[:redis][:databases],
         :rdbcompression => node[:redis][:rdbcompression],
-        :hz => node[:redis][:hz],
-        :bind_ip => node[:redis][:bind_ip]
+        :hz => node[:redis][:hz]
       })
     end
 

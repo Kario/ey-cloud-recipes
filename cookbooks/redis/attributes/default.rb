@@ -13,8 +13,7 @@ default[:redis] = {
   :saveperiod => ["900 1", "300 10", "60 10000"],
   :databases => 16,
   :rdbcompression => "yes",
-  :hz => 10,
-  :bind_ip => node[:applications].first[:public_ip]
+  :hz => 10
 }
 default[:redis][:is_redis_instance] = (
   (node[:instance_role] == 'util') &&
