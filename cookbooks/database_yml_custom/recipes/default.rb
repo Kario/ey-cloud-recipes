@@ -19,7 +19,7 @@ rescue
 end
 %>
       RUBY
-      dbtype = '<%= determine_adapter %>'
+      dbtype = 'mysql2'
     end
   
     template "/data/#{app[:name]}/shared/config/database.yml" do
