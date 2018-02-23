@@ -14,7 +14,7 @@ default[:redis] = {
   :databases => 16,
   :rdbcompression => "yes",
   :hz => 10,
-  :bind_ip => node[:master_app_server][:public_ip]
+  :bind_ip => node[:applications].first[:public_ip]
 }
 default[:redis][:is_redis_instance] = (
   (node[:instance_role] == 'util') &&
