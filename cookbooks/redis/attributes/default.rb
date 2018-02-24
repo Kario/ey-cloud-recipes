@@ -16,6 +16,5 @@ default[:redis] = {
   :hz => 10
 }
 default[:redis][:is_redis_instance] = (
-  (node[:instance_role] == 'util') &&
-  [default[:redis][:utility_name], default[:redis][:slave_name]].include?(node[:name])
+  (node[:instance_role] == 'solo')
 )
